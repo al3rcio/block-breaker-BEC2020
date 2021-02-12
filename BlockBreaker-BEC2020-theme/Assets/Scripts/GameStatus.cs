@@ -13,6 +13,7 @@ public class GameStatus : MonoBehaviour
 
     // states variables
     [SerializeField] public int currentScore = 0;
+    [SerializeField] public bool autoPlay = false;
 
     private void Awake()
     {
@@ -51,5 +52,10 @@ public class GameStatus : MonoBehaviour
     void Update()
     {
         Time.timeScale = gameSpeed;
+    }
+
+    public bool AutoPlay()
+    {
+        return autoPlay;
     }
 }
